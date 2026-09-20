@@ -6,8 +6,6 @@ rewrite, for the discontinued NEJE DK-8-KZ and its siblings.
 **NEJE no longer hosts V3.6, and it is still the latest fully compatible
 software for these machines.**
 
-![The NEJE DK-8-KZ and the contents of its box](docs/dk-8-kz.jpg)
-
 NEJE does not distribute V3.6 any more. It is not on `neje.club`, not on
 `neje.wiki`, and not on `wiki.nejetool.com`; those only go back as far as V4.0.
 This repository is an unmodified personal copy, kept so that owners of these
@@ -51,7 +49,6 @@ repacked.
 | `How to install the software in windows.docx` | 26 KiB | NEJE's own three-step install note. |
 | `pic sample 490x490px/` | 2.0 MiB | 34 sample JPGs at the machine's native 490 × 490 px, plus `specification.txt`. |
 | `SHA256SUMS.txt` | — | SHA-256 for all 40 files. Added by this archive; not part of the original bundle. |
-| `docs/` | 95 KiB | The two illustrations used in this README, lifted from `DK-8-KZ Manual.pdf` above. Also not part of the original bundle. |
 
 No .NET Framework installer is included — NEJE's install note tells you to get
 .NET 4.0 yourself, and on Windows 10 and 11 you already have it.
@@ -109,17 +106,15 @@ heuristics may complain about them even when they are intact.
    with a broken one. Modern Windows supplies the CH340 driver through Windows
    Update automatically, and macOS has included one since Big Sur.
 
-3. **Confirm the laser enumerates.** The machine takes two cables — power and
-   USB data:
-
-   ![DK-8-KZ connected to a laptop, showing the power cable and the data cable](docs/connecting.jpg)
-
-   Plug in the USB data cable and check
-   Device Manager → Ports (COM & LPT). You want a `USB-SERIAL CH340 (COMx)`
-   entry. If it is not there, fix that before touching the software — no
+3. **Confirm the laser enumerates, before you start the application.** Plug in
+   the USB data cable and check Device Manager → Ports (COM & LPT). You want a
+   `USB-SERIAL CH340 (COMx)` entry. If it is not there, fix that first — no
    version of the application can help you past a driver problem.
 
-4. **Run the application and select that COM port.**
+4. **Run the application.** There is no COM port to pick. It searches for the
+   machine itself as it starts, shows "Auto Connecting…", and reports the
+   result in its status pane. If it does not find the machine, the fault is
+   the cable, the power or the driver — not the software.
 
 ## Notes
 
@@ -137,9 +132,8 @@ heuristics may complain about them even when they are intact.
 
 Downloaded in 2018 from NEJE's own download page, before the V4 rewrite
 replaced it, and kept since. This is that download, unmodified: no file has
-been altered, renamed, recompressed or removed, and the only additions are this
-README, `SHA256SUMS.txt`, and the two images under `docs/`, which are taken
-from the manual in this same archive.
+been altered, renamed, recompressed or removed, and nothing has been added
+except this README and `SHA256SUMS.txt`.
 
 The files carry their original timestamps of 2018-09-04, except `NEJE/V30.exe`,
 which is stamped 2019-03-15.

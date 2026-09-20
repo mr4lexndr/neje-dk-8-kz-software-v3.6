@@ -6,12 +6,12 @@ rewrite, for the discontinued NEJE DK-8-KZ and its siblings.
 **NEJE no longer hosts V3.6, and it is still the latest fully compatible
 software for these machines.**
 
-NEJE never published V3.x on the web for long — it shipped on the microSD card
-in the box, and the installer was on NEJE's own download page until the V4
-rewrite replaced it. It is not on `neje.club`, not on `neje.wiki`, and not on
-`wiki.nejetool.com`; those only go back as far as V4.0. There is no longer an
-official download. This repository is an unmodified personal copy of what NEJE
-served, kept so that owners of these machines have somewhere durable to get it.
+![The NEJE DK-8-KZ and the contents of its box](docs/dk-8-kz.jpg)
+
+NEJE does not distribute V3.6 any more. It is not on `neje.club`, not on
+`neje.wiki`, and not on `wiki.nejetool.com`; those only go back as far as V4.0.
+This repository is an unmodified personal copy, kept so that owners of these
+machines have somewhere durable to get it.
 
 If you came here searching for a **NEJE DK-8-KZ software download**, this is
 **NEJE V3.6** — the version those machines were sold with.
@@ -21,10 +21,10 @@ If you came here searching for a **NEJE DK-8-KZ software download**, this is
 V3.6 is the latest fully compatible software for this hardware and the one to
 use — not a fallback, and not a historical curiosity. The "legacy" build NEJE
 currently offers for these machines is severely cut down by comparison and
-takes real effort to get talking to a DK-8-KZ at all. The current NEJE
-software does not drive them at all. Nothing released after V3.6
-is an upgrade for a DK-8-KZ, DK-8-FKZ or NEJE-BL, which is why this archive
-deliberately points nowhere else.
+takes real effort to get talking to a DK-8-KZ at all. The current NEJE software
+does not drive them at all. Nothing released after V3.6 is an upgrade for a
+DK-8-KZ, DK-8-FKZ or NEJE-BL, which is why this archive deliberately points
+nowhere else.
 
 ## What this is for
 
@@ -51,11 +51,20 @@ repacked.
 | `How to install the software in windows.docx` | 26 KiB | NEJE's own three-step install note. |
 | `pic sample 490x490px/` | 2.0 MiB | 34 sample JPGs at the machine's native 490 × 490 px, plus `specification.txt`. |
 | `SHA256SUMS.txt` | — | SHA-256 for all 40 files. Added by this archive; not part of the original bundle. |
+| `docs/` | 95 KiB | The two illustrations used in this README, lifted from `DK-8-KZ Manual.pdf` above. Also not part of the original bundle. |
 
 No .NET Framework installer is included — NEJE's install note tells you to get
 .NET 4.0 yourself, and on Windows 10 and 11 you already have it.
 
-## Verify before you run it
+## Checking your download (optional)
+
+You do not need this to use the software. It is here for one purpose: to let
+you prove that the files you downloaded are byte-for-byte the files in this
+repository, and not something altered on the way to you or re-uploaded
+somewhere else. If you got them straight from this repository and that is good
+enough for you, skip to [Installing](#installing).
+
+To check, compare the SHA-256 of each file against the list below.
 
 | File | SHA-256 |
 | --- | --- |
@@ -65,9 +74,10 @@ No .NET Framework installer is included — NEJE's install note tells you to get
 | `DK-8-KZ Manual.pdf` | `49d8b54ae04efbc3caa29a910bcd5971c485e8cb3604ef1e1e251485f7f79f44` |
 | `How to install the software in windows.docx` | `d54ed9d71662f9706807509907416b995e773817bdfa0d406c49db11f771f2c0` |
 
-`SHA256SUMS.txt` covers every file including the sample images.
+`SHA256SUMS.txt` covers all 40 files of the original bundle, sample images
+included.
 
-Check the hash after downloading:
+One file at a time:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 .\<file>
@@ -77,12 +87,15 @@ Get-FileHash -Algorithm SHA256 .\<file>
 shasum -a 256 <file>
 ```
 
+Or everything at once, from the root of a clone:
+
 ```sh
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-If it does not match, do not run it. These are old, unsigned binaries, so
-antivirus heuristics may flag them; check them yourself before trusting them.
+A hash that does not match means the file is not the one archived here — don't
+run it. Separately, and expected: these are old unsigned binaries, so antivirus
+heuristics may complain about them even when they are intact.
 
 ## Installing
 
@@ -96,7 +109,12 @@ antivirus heuristics may flag them; check them yourself before trusting them.
    with a broken one. Modern Windows supplies the CH340 driver through Windows
    Update automatically, and macOS has included one since Big Sur.
 
-3. **Confirm the laser enumerates.** Plug in the USB data cable and check
+3. **Confirm the laser enumerates.** The machine takes two cables — power and
+   USB data:
+
+   ![DK-8-KZ connected to a laptop, showing the power cable and the data cable](docs/connecting.jpg)
+
+   Plug in the USB data cable and check
    Device Manager → Ports (COM & LPT). You want a `USB-SERIAL CH340 (COMx)`
    entry. If it is not there, fix that before touching the software — no
    version of the application can help you past a driver problem.
@@ -119,8 +137,9 @@ antivirus heuristics may flag them; check them yourself before trusting them.
 
 Downloaded in 2018 from NEJE's own download page, before the V4 rewrite
 replaced it, and kept since. This is that download, unmodified: no file has
-been altered, renamed, recompressed or removed, and nothing has been added
-except this README and `SHA256SUMS.txt`.
+been altered, renamed, recompressed or removed, and the only additions are this
+README, `SHA256SUMS.txt`, and the two images under `docs/`, which are taken
+from the manual in this same archive.
 
 The files carry their original timestamps of 2018-09-04, except `NEJE/V30.exe`,
 which is stamped 2019-03-15.

@@ -19,10 +19,10 @@ If you came here searching for a **NEJE DK-8-KZ software download**, this is
 ## Why V3.6, and not something newer
 
 V3.6 is the latest fully compatible software for this hardware and the one to
-use — not a fallback, and not a historical curiosity. The "legacy"
-build NEJE currently offers for these machines is severely cut down by
-comparison and takes real effort to get talking to a DK-8-KZ at all. The
-current NEJE software does not drive them at all. Nothing released after V3.6
+use — not a fallback, and not a historical curiosity. The "legacy" build NEJE
+currently offers for these machines is severely cut down by comparison and
+takes real effort to get talking to a DK-8-KZ at all. The current NEJE
+software does not drive them at all. Nothing released after V3.6
 is an upgrade for a DK-8-KZ, DK-8-FKZ or NEJE-BL, which is why this archive
 deliberately points nowhere else.
 

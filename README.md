@@ -3,6 +3,9 @@
 An archive of **NEJE control software V3.6**, the last release before the V4
 rewrite, for the discontinued NEJE DK-8-KZ and its siblings.
 
+**NEJE no longer hosts V3.6, and it is still the latest fully compatible
+software for these machines.**
+
 NEJE never published V3.x on the web for long — it shipped on the microSD card
 in the box, and the installer was on NEJE's own download page until the V4
 rewrite replaced it. It is not on `neje.club`, not on `neje.wiki`, and not on
@@ -15,8 +18,8 @@ If you came here searching for a **NEJE DK-8-KZ software download**, this is
 
 ## Why V3.6, and not something newer
 
-V3.6 is the last software that drives this hardware properly, and it is still
-the one to use — not a fallback, and not a historical curiosity. The "legacy"
+V3.6 is the latest fully compatible software for this hardware and the one to
+use — not a fallback, and not a historical curiosity. The "legacy"
 build NEJE currently offers for these machines is severely cut down by
 comparison and takes real effort to get talking to a DK-8-KZ at all. The
 current NEJE software does not drive them at all. Nothing released after V3.6

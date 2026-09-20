@@ -6,6 +6,8 @@ rewrite, for the discontinued NEJE DK-8-KZ and its siblings.
 **NEJE no longer hosts V3.6, and it is still the latest fully compatible
 software for these machines.**
 
+![NEJE DK-8-KZ laser engraver](docs/dk-8-kz.jpg)
+
 NEJE does not distribute V3.6 any more. It is not on `neje.club`, not on
 `neje.wiki`, and not on `wiki.nejetool.com`; those only go back as far as V4.0.
 This repository is an unmodified personal copy, kept so that owners of these
@@ -134,6 +136,10 @@ Downloaded in 2018 from NEJE's own download page, before the V4 rewrite
 replaced it, and kept since. This is that download, unmodified: no file has
 been altered, renamed, recompressed or removed, and nothing has been added
 except this README and `SHA256SUMS.txt`.
+
+The photo at the top is not part of the archive: it is NEJE's own product shot
+of the machine, taken from a reseller listing and cropped. Same terms as the
+rest of this repository — see Legal.
 
 The files carry their original timestamps of 2018-09-04, except `NEJE/V30.exe`,
 which is stamped 2019-03-15.
